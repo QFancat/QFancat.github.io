@@ -41,7 +41,7 @@ interests:
   - Document Driven Security
 
 education:
-  - area: MPhil @ Computer Science and Engineering, Expected 2028
+  - area: MPhil @ Computer Science and Engineering
     institution: Hong Kong University of Science and Technology
     date_start: 2024-09-01
     date_end: 2026-03-31

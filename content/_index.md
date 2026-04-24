@@ -36,8 +36,9 @@ sections:
       title: '📑 Featured Publications'
       subtitle: ''
       text: |-
-        + Chong Fu, Yuwen Pu, **Qiao Zhang**, Jiayu Pan, Jing Qiu, Xuhong Zhang, Yiming Wu, and Shouling Ji, SecretKeeper: Robust Vertical Federated Learning Against Label Inference Attacks, NSE 2023.
         + Boyu Chang, Binbin Zhao, **Qiao Zhang**, Peiyu Liu, Yuan Tian, Raheem Beyah and Shouling Ji, FirmRCA: Towards Post-Fuzzing Analysis on ARM Embedded Firmware with Efficient Event-based Fault Localization.
+        + Chong Fu, Yuwen Pu, **Qiao Zhang**, Jiayu Pan, Jing Qiu, Xuhong Zhang, Yiming Wu, and Shouling Ji, SecretKeeper: Robust Vertical Federated Learning Against Label Inference Attacks, NSE 2023.
+        
     design:
       columns: '1'
   - block: markdown

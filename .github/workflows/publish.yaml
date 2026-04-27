@@ -2,7 +2,8 @@ name: Deploy website to GitHub Pages
 
 env:
   WC_HUGO_VERSION: '0.126.1'
-  NODE_VERSION: '20'
+  NODE_VERSION: '24'
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
 on:
   # Trigger the workflow every time you push to the `main` branch
@@ -28,7 +29,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout
-      uses: actions/checkout@v4.1.1
+      uses: actions/checkout@v6.0.2
       with:
           # Fetch history for Hugo's .GitInfo and .Lastmod
         fetch-depth: 0
@@ -38,10 +39,10 @@ jobs:
         hugo-version: ${{ env.WC_HUGO_VERSION }}
         extended: true
     - name: Setup Node.js
-      uses: actions/setup-node@v4
+      uses: actions/setup-node@v6.4.0
       with:
         node-version: ${{ env.NODE_VERSION }}
-    - uses: actions/cache@v4
+    - uses: actions/cache@v5.0.5
       with:
         path: /tmp/hugo_cache_runner/
         key: ${{ runner.os }}-hugomod-${{ hashFiles('**/go.mod') }}

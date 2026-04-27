@@ -34,10 +34,10 @@ jobs:
           # Fetch history for Hugo's .GitInfo and .Lastmod
         fetch-depth: 0
     - name: Setup Hugo
-      uses: peaceiris/actions-hugo@v3.0.0
-      with:
-        hugo-version: ${{ env.WC_HUGO_VERSION }}
-        extended: true
+      run: |
+        wget -O hugo.tar.gz https://github.com/gohugoio/hugo/releases/download/v${{ env.WC_HUGO_VERSION }}/hugo_extended_${{ env.WC_HUGO_VERSION }}_Linux-64bit.tar.gz
+        tar -xzf hugo.tar.gz
+        sudo mv hugo /usr/local/bin/
     - name: Setup Node.js
       uses: actions/setup-node@v6.4.0
       with:
@@ -50,7 +50,7 @@ jobs:
           ${{ runner.os }}-hugomod-
     - name: Setup Pages
       id: pages
-      uses: actions/configure-pages@v5
+      uses: actions/configure-pages@v6.0.0
     - name: Build with Hugo
       env:
         HUGO_ENVIRONMENT: production
